@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "In sit amet sem condimentum, pretium erat id, tempus purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed felis ligula, mattis at ornare in, luctus quis augue. Phasellus vestibulum mattis nulla, a pellentesque nunc accumsan non. Sed eget nisi auctor, euismod arcu at, finibus augue. Sed vestibulum, risus ac accumsan condimentum, neque risus venenatis diam, in consequat est ex sed ligula. Donec nec tortor pellentegisque, malesuada augue id, pretium nibh. In sollicitudin, libero a dapibus faucibus, metus nulla consequat tellus, ornare maximus enim mi in libero. Suspendisse potenti. Phasellus finibus lobortis ante ut mattis. Mauris tincidunt viverra quam. Cras vel elit sed quam iaculis eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut eleifend quam et dictum vehicula. Donec finibus sit amet eros at luctus.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saidmsaif/stack-bucket-mern-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saidmsaif/stack-bucket-mern-server/issues"
+  },
+  "homepage": "https://github.com/saidmsaif/stack-bucket-mern-server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.9",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.6"
+  },
+  "engines": {
+    "node": "14.15.3"
+  }
+}
