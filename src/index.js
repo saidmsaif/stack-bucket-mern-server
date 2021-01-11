@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 })
 
 app.use((req, res, next) => {
-    const err = new Error('404 not found')
+    const err = new Error('404 Internal Server Error')
     err.status = 404
     next(err)
 })
@@ -36,16 +36,36 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) => {
     if (err.status === 404) {
         return res.status(404).json({
-            error: err.message,
+            err: err.message,
             status: 404
         })
     } else {
         return res.status(500).json({
-            msg: 'Internal Server Error',
+            err: 'Error Occured',
             status: 500
         })
     }
 })
+
+// app.use((req, res, next) => {
+//     const err = new Error('404 not found')
+//     err.status = 404
+//     next(err)
+// })
+
+// app.use((err, req, res, next) => {
+//     if (err.status === 404) {
+//         return res.status(404).json({
+//             error: err.message,
+//             status: 404
+//         })
+//     } else {
+//         return res.status(500).json({
+//             msg: 'Internal Server Error',
+//             status: 500
+//         })
+//     }
+// })
 
 app.listen(process.env.PORT, () => {
     console.log(`Server Running on Port `, process.env.PORT);
