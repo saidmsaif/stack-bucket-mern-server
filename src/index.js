@@ -12,7 +12,7 @@ mongoose.connect('mongodb://localhost:27017/stack-bucket-mern', {
 }).then(() => {
     console.log('Database Connected');
 }).catch((e) => {
-    console.log(e);
+    console.log(e); 
 })
 
 app.use(cors())
@@ -23,7 +23,7 @@ app.use(express.urlencoded({extended: false}))
 
 app.get('/', (req, res) => {
     res.status('200').json({
-        msg: "Hello World"
+        msg: "Hello World",
     })
 })
 
@@ -42,7 +42,7 @@ app.use((err, req, res, next) => {
     } else {
         return res.status(500).json({
             err: 'Error Occured',
-            status: 500
+            status: 500,
         })
     }
 })
