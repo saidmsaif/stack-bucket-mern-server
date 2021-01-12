@@ -1,11 +1,9 @@
-// Modules Imports
 const { Schema, model } = require('mongoose')
 
-// Schema Init
 const BucketSchema = new Schema({
     name: {
         type: String,
-        required: true
+        require: true,
     },
     cost: {
         type: Number,
@@ -17,8 +15,4 @@ const BucketSchema = new Schema({
     }
 }, {timestamps: true})
 
-// Model Creation
 const Bucket = model('Bucket', BucketSchema)
-
-// Module Exports
-module.exports = Bucket
