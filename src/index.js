@@ -2,8 +2,8 @@ require('dotenv').config()
 const path = require('path')
 const express = require('express')
 const cors = require('cors')
-const morgan = require('morgan')
 const mongoose = require('mongoose')
+const { useMorgan } = require('./middlewares')
 
 const app = express()
 mongoose.connect('mongodb://localhost:27017/stack-bucket-mern', {
@@ -15,9 +15,10 @@ mongoose.connect('mongodb://localhost:27017/stack-bucket-mern', {
     console.log(e); 
 })
 
+
+useMorgan(app)
 app.use(cors())
 app.use(express.static(path.join(__dirname, '../', 'public')))
-app.use(morgan('dev'))
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
