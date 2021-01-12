@@ -1,3 +1,6 @@
+// Day 2
+
+// Modules Import
 require('dotenv').config()
 const path = require('path')
 const express = require('express')
@@ -47,26 +50,6 @@ app.use((err, req, res, next) => {
         })
     }
 })
-
-// app.use((req, res, next) => {
-//     const err = new Error('404 not found')
-//     err.status = 404
-//     next(err)
-// })
-
-// app.use((err, req, res, next) => {
-//     if (err.status === 404) {
-//         return res.status(404).json({
-//             error: err.message,
-//             status: 404
-//         })
-//     } else {
-//         return res.status(500).json({
-//             msg: 'Internal Server Error',
-//             status: 500
-//         })
-//     }
-// })
 
 app.listen(process.env.PORT, () => {
     console.log(`Server Running on Port `, process.env.PORT);
