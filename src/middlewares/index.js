@@ -1,3 +1,5 @@
 const useMorgan = require('./useMorgan')
 
-module.exports = useMorgan
+module.exports = {
+    useMorgan,
+}
