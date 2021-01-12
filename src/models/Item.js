@@ -1,11 +1,9 @@
-// Module Imports
 const { Schema, model } = require('mongoose')
 
-// Schema Init
 const ItemSchema = new Schema({
     name: {
-        type: String,
-        required: true,
+        tyep: String,
+        required: true
     },
     cost: {
         type: Number,
@@ -15,11 +13,8 @@ const ItemSchema = new Schema({
     quantity: String,
     isComplete: {
         type: Boolean,
-        default: false,
+        default: false
     }
 })
 
-// Model Init
 const Item = model('Item', ItemSchema)
-
-module.exports = Item
